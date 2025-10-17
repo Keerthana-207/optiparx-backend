@@ -12,6 +12,11 @@ const allowedOrigins = ['https://optiparx-users.netlify.app/'];
 // Middleware
 app.use(express.json());
 
+app.use(cors({
+  origin: 'https://optiparx-users.netlify.app',
+  credentials: true
+}));
+
 
 // Connect to MongoDB
 connectDB();
